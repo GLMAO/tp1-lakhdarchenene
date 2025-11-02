@@ -54,9 +54,12 @@
     <plugins>
        
             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-assembly-plugin</artifactId>
+                 <version>3.3.0</version>
                  <executions>
                      <execution>
+                          <id>make-assembly</id>
                           <phase>package</phase>
                           <goals>
                               <goal>single</goal>
@@ -64,16 +67,25 @@
                       </execution>
                   </executions>
                   <configuration>
-                       <!-- ... -->
                        <archive>
                            <manifest>
-                                 <mainClass>org.emp.gl.core.launcher.App</mainClass>
+                                 <mainClass>org.emp.gl.core.launcher.TimerGUI</mainClass>
                            </manifest>
                        </archive>
                        <descriptorRefs>
                            <descriptorRef>jar-with-dependencies</descriptorRef>
                       </descriptorRefs>
                  </configuration>
+         </plugin>
+         
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <failOnError>false</failOnError>
+                <excludeDefaultDirectories>false</excludeDefaultDirectories>
+            </configuration>
          </plugin>
    
     </plugins>
