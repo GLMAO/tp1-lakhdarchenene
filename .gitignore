@@ -1,16 +1,17 @@
-# Compiled class file
+# ===========================================
+# Java & Maven project .gitignore
+# ===========================================
+
+# --- Java compiled files ---
 *.class
-
-# Log file
 *.log
+hs_err_pid*
+replay_pid*
 
-# BlueJ files
+# --- BlueJ files ---
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# --- JAR / WAR / EAR packages ---
 *.jar
 *.war
 *.nar
@@ -19,6 +20,24 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# --- Maven build output ---
+target/
+**/target/
+
+# --- IntelliJ IDEA project files ---
+.idea/
+*.iml
+out/
+
+# --- VS Code project files ---
+.vscode/
+
+# --- Eclipse project files ---
+.settings/
+.project
+.classpath
+
+# --- Temporary / OS files ---
+.DS_Store
+Thumbs.db
+*.tmp
